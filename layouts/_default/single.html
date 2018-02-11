@@ -1,0 +1,12 @@
+{{ define "main" }}
+    {{ if eq .Section "posts" }}
+        <div class="info">
+            Posted on {{ .Date.Format "January 2, 2006" }}
+            {{ if .Params.author }}
+                by {{ .Params.author }}
+            {{ end }}
+        </div>
+    {{ end }}
+
+    {{ .Content }}
+{{ end }}
